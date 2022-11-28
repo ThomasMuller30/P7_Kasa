@@ -6,8 +6,8 @@ const Header = () => {
         <header>
             <img id="logoHeader" src={logo} alt="Kasa" />
             <nav>
-                <p class="navPrincipale" id="navAccueil">Accueil</p>
-                <p class="navPrincipale" id="navAbout">A propos</p>
+                <a href="#" className="navPrincipale" id="navAccueil">Accueil</a>
+                <a href="#" className="navPrincipale" id="navAbout">A propos</a>
             </nav>
         </header>
     )

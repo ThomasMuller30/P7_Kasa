@@ -11,7 +11,7 @@ header {
     align-items: center;
   }
   
-  header nav p.navPrincipale {
+  header nav a.navPrincipale {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
