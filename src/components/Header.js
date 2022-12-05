@@ -1,13 +1,14 @@
 import logo from "../assets/logo.svg"
 import '../styles/Header.css'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <header>
             <img id="logoHeader" src={logo} alt="Kasa" />
             <nav>
-                <a href="#" className="navPrincipale" id="navAccueil">Accueil</a>
-                <a href="#" className="navPrincipale" id="navAbout">A propos</a>
+                <Link to='' className="navPrincipale" id="navAccueil">Accueil</Link>
+                <Link to='/About' className="navPrincipale" id="navAbout">A propos</Link>
             </nav>
         </header>
     )
