@@ -10,6 +10,7 @@
     font-weight: 700;
     font-size: 288px;
     color: #ff6060;
+    margin: 0;
   }
   
   #oups {
@@ -21,7 +22,7 @@
   }
   
   .backHome {
-    margin-top: 200px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
