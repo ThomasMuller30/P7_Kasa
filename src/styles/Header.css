@@ -23,3 +23,24 @@ header {
   #navAccueil {
     text-decoration-line: underline;
   }
+
+  @media screen and (max-width: 376px) {
+    /* HEADER */
+  
+    header {
+      margin: 30px;
+    }
+  
+    img#logoHeader {
+      width: 40%;
+    }
+  
+    header nav {
+      width: 166px;
+    }
+  
+    header nav p.navPrincipale {
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
