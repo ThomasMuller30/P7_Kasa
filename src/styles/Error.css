@@ -1,0 +1,57 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #numberError {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    color: #ff6060;
+  }
+  
+  #oups {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #ff6060;
+  }
+  
+  .backHome {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #backToHome {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff6060;
+    text-decoration-line: underline;
+  }
+  
+  @media screen and (max-width: 376px) {
+    .error {
+      margin-top: 200px;
+    }
+  
+    #numberError {
+      font-size: 96px;
+    }
+  
+    #oups {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    #backToHome {
+      font-size: 14px;
+    }
+  }
+  
