@@ -1,7 +1,7 @@
 import '../styles/Home.css'
 import banniereAccueil from '../assets/banniere-accueil.svg'
 
-const Home = () => {
+const Home = ({ logements }) => {
     return (
         <main>
             <div id="banniereAccueil">
@@ -9,24 +9,11 @@ const Home = () => {
                 <img id="fondBanniere" src={banniereAccueil} alt="Paysage montagneux en bord de mer" />
             </div>
             <div className="gallery">
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
-                <div className="locations">
-                    <p className="titleLocation">Titre de la location</p>
-                </div>
+                {logements.map((logement) => (
+                    <div className="locations">
+                        <p className="titleLocation">{logement.title}</p>
+                    </div>
+                ))}
             </div>
         </main>
     )

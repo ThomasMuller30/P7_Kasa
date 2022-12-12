@@ -3,18 +3,26 @@ import Footer from "./components/Footer"
 import Error from "./components/Error"
 import About from "./components/About"
 import Home from "./components/Home"
-// import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
 function App() {
+  const [logements, setLogements] = useState([])
+
+  useEffect ( () => {
+    fetch('/logements.json')
+      .then( (response) => response.json() )
+      .then( (logements) => {setLogements(logements)} )
+  }, [] )
+
   return (
     <>
     <Router>
       <Header />
       <Routes>
-        <Route path='' element={<Home />} />
-        {/* <Route path='' element={} /> */}
+        <Route path='' element={<Home logements={logements} />} />
+        {/* <Route path='/:id' element={} /> */}
         <Route path='/about' element={<About />} />
         <Route path='*' element={<Error />} />
       </Routes>
