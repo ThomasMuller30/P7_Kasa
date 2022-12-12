@@ -1,5 +1,5 @@
 import '../styles/Home.css'
-import banniereAccueil from '../assets/banniere-accueil.svg'
+import banniereAccueil from '../assets/banniere-accueil.jpg'
 import { Link } from 'react-router-dom'
 
 const Home = ({ logements }) => {

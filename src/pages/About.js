@@ -1,5 +1,5 @@
 import '../styles/About.css'
-import apropos from '../assets/banniere-a-propos.svg'
+import apropos from '../assets/banniere-a-propos.jpg'
 import Details from '../components/Details'
 
 const About = () => {
