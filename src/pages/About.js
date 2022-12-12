@@ -1,6 +1,6 @@
 import '../styles/About.css'
 import apropos from '../assets/banniere-a-propos.svg'
-import Details from './Details'
+import Details from '../components/Details'
 
 const About = () => {
     const infos = [
