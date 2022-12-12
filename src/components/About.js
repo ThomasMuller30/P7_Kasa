@@ -17,7 +17,7 @@ const About = () => {
                 </div>
                 <div class="descriptions">
                     {infos.map((info) => (
-                        <Details summary={info.summary}>
+                        <Details key={info.index} summary={info.summary}>
                             {info.description}
                         </Details>
                     ))}
