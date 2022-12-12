@@ -1,5 +1,6 @@
 import '../styles/Home.css'
 import banniereAccueil from '../assets/banniere-accueil.svg'
+import { Link } from 'react-router-dom'
 
 const Home = ({ logements }) => {
     return (
@@ -10,9 +11,12 @@ const Home = ({ logements }) => {
             </div>
             <div className="gallery">
                 {logements.map((logement) => (
-                    <div className="locations">
-                        <p className="titleLocation">{logement.title}</p>
-                    </div>
+                                <Link to={logement.id} className="link">
+                                    <div className="locations">
+                                        <img src={logement.cover} alt={"Photo de " + logement.title} />
+                                        <p className="titleLocation">{logement.title}</p>
+                                    </div>
+                                </Link>
                 ))}
             </div>
         </main>
