@@ -1,0 +1,107 @@
+#carrousel {
+    display: block;
+    width: 100%;
+    margin-bottom: -50px;
+  }
+  
+  #carrousel img {
+    width: 100%;
+  }
+  
+  #ath {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -270px;
+  }
+  
+  #ath img {
+    width: 8%;
+  }
+  
+  #flecheGauche {
+    rotate: 90deg;
+  }
+  
+  #flecheDroite {
+    rotate: -90deg;
+  }
+  
+  #numberCarrousel {
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: -120px;
+  }
+  
+  #enteteLogement {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: Montserrat;
+    color: #ff6060;
+  }
+  
+  #leftSide {
+    flex: 1;
+  }
+  
+  h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+  }
+  
+  #localisation {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  #tags {
+    display: flex;
+  }
+  
+  .tag {
+    padding: 5px 20px;
+    color: white;
+    background-color: #ff6060;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+  }
+  
+  #rightSide {
+    width: 12%;
+  }
+  
+  #identite {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  #identite p {
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  #contenu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #contenu details {
+    width: 48%;
+    font-weight: 400;
+    font-size: 18px;
+  }
