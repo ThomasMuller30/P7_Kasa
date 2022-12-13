@@ -1,20 +1,30 @@
 import '../styles/Logement.css'
 import fleche from '../assets/fleche.svg'
 import carrousel from '../assets/carrousel.jpg'
-import hostimg from '../assets/Hostimg.svg'
+import { useParams } from 'react-router-dom'
+import { useState } from 'react'
+import Error from '../pages/Error'
+import Details from '../components/Details'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const Logement = ({ logements }) => {
-    const str = window.location;
-    const url = new URL(str);
-    const id = url.searchParams.get("id");
-    const host = "http:localhost:3000/";
-    const objectUrl = host + id;
-    console.log(url);
-    console.log(id);
-    console.log(objectUrl);
+    const { id } = useParams();
+    
+    const [logement] = useState(
+        logements.find(item => item.id === id)
+    );
+
+    const rating = parseInt(logement.rating);
+
+    const array = [...Array(rating)];
+    const starVide = [...Array(5 - rating)];
+    console.log(array)
 
     return (
+        
         <main>
+            {logement !== undefined ? (
+            <> 
             <div id="carrousel">
                 <img src={carrousel} alt="test carrousel" />
                 <div id="ath">
@@ -25,38 +35,41 @@ const Logement = ({ logements }) => {
             </div>
             <div id="enteteLogement">
                 <div id="leftSide">
-                    <h1>Cozy loft on the Canal Saint-Martin</h1>
-                    <p id="localisation">Paris, Île-de-France</p>
+                    <h1>{logement.title}</h1>
+                    <p id="localisation">{logement.location}</p>
                     <div id="tags">
-                        <div class="tag"><p>Cozy</p></div>
-                        <div class="tag"><p>Canal</p></div>
-                        <div class="tag"><p>Paris 10</p></div>
+                        {logement.tags.map((tag) => 
+                            <div className="tag"><p>{tag}</p></div>
+                        )}
                     </div>
                 </div>
                 <div id="rightSide">
                     <div id="identite">
-                        <p>Alexandre Dumas</p>
-                        <img src={hostimg} alt="PP du propriétaire" />
+                        <p>{logement.host.name}</p>
+                        <img id="pictureProfil" src={logement.host.picture} alt="PP du propriétaire" />
                     </div>
-                    <p>3 étoiles</p>
+                    {array.map(() => 
+                        <i key={array.index} className="fa-solid fa-star"></i>
+                    )}
+                    {starVide.map(() => 
+                        <i key={starVide.index} className="fa-solid fa-star grise"></i>
+                    )
+                    }
+                    
                 </div>
             </div>
             <div id="contenu">
-                <details>
-                    <summary>Description <img src={fleche} alt="fleche fermé" /></summary>
-                    Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied).
-                </details>
-                <details id="equipements">
-                    <summary>Équipements <img src={fleche} alt="fleche fermé" /></summary>
-                    Climatisation<br />
-                    Wi-Fi<br />
-                    Cuisine<br />
-                    Espace de travail<br />
-                    Fer à repasser<br />
-                    Sèche-cheveux<br />
-                    Cintres
-                </details>
+                <Details summary='Description'>
+                    {logement.description}
+                </Details>
+                <Details summary='Équipements'>
+                    {logement.equipments.map((equipement) => 
+                    <p>{equipement}</p>
+                    )}
+                </Details>
             </div>
+            </>
+            ) : (<Error />)}
         </main>
 
 

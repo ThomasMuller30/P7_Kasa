@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 #carrousel {
     display: block;
     width: 100%;
@@ -77,9 +83,13 @@
     font-size: 14px;
     margin: 0 10px 0 0;
   }
+
+  .tag p {
+    margin: 0;
+  }
   
   #rightSide {
-    width: 12%;
+    width: 10%;
   }
   
   #identite {
@@ -93,6 +103,15 @@
   #identite p {
     text-align: right;
     margin-right: 10px;
+  }
+
+  #pictureProfil {
+    width: 45%;
+    border-radius: 50%;
+  }
+
+  .grise {
+    color: grey;
   }
   
   #contenu {

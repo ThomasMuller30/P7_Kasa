@@ -11,7 +11,7 @@ const Home = ({ logements }) => {
             </div>
             <div className="gallery">
                 {logements.map((logement) => (
-                    <Link to={logement.id} className="link">
+                    <Link to={"/logement/" + logement.id} className="link">
                         <div className="locations">
                             <img src={logement.cover} alt={"Photo de " + logement.title} />
                             <p className="titleLocation">{logement.title}</p>

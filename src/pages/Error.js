@@ -9,7 +9,7 @@ const Error = () => {
                 <p id="oups">Oups ! La page que vous demandez n'existe pas.</p>
             </div>
             <div class="backHome">
-                <Link id='backToHome' to=''>Retourner sur la page d'accueil</Link>
+                <Link id='backToHome' to='/'>Retourner sur la page d'accueil</Link>
             </div>
         </>
     )
