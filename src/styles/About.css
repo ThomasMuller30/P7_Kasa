@@ -82,4 +82,8 @@
     details {
       width: 90%;
     }
+
+    details[open] {
+      width: 92%;
+    }
   }
