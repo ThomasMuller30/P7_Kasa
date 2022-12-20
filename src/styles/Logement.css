@@ -13,8 +13,9 @@
   
   .carousel img {
     width: 100%;
-    height: 90%;
+    height: 85%;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   #ath {
@@ -123,12 +124,58 @@
   }
   
   #contenu {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   
   #contenu details {
     width: 48%;
     font-weight: 400;
     font-size: 18px;
+  }
+
+  @media screen and (max-width: 376px) {
+    main {
+      margin: 0 15px;
+    }
+
+    #enteteLogement {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #rightSide {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #note {
+      flex: 1;
+      justify-content: flex-start;
+    }
+
+    #note i {
+      font-size: 16px;
+    }
+
+    #identite {
+      width: 50%;
+    }
+
+    #contenu {
+      flex-direction: column;
+    }
+
+    #contenu details {
+      width: 100%;
+    }
+
+    #contenu details[open]{
+      width: 100%;
+    }
   }
