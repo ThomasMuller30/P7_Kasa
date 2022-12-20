@@ -21,17 +21,14 @@ const Logement = ({ logements }) => {
     const starVide = [...Array(5 - rating)];
 
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(1);
-    const [currentLenght, setCurrentLenght] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     function goToPrevSlide() {
-        setCurrentImageIndex(currentImageIndex === 1 ? logement.pictures.length - 1 : currentImageIndex - 1);
-        setCurrentLenght(currentLenght === 0 ? currentLenght - 1 : 1);
+        setCurrentImageIndex(currentImageIndex === 0 ? logement.pictures.length - 1 : currentImageIndex - 1);
     }
 
     function goToNextSlide() {
-        setCurrentImageIndex(currentImageIndex === logement.pictures.length - 1 ? 1 : currentImageIndex + 1);
-        setCurrentLenght(currentLenght === currentLenght - 1 ? 1 : currentLenght + 1);
+        setCurrentImageIndex(currentImageIndex === logement.pictures.length - 1 ? 0 : currentImageIndex + 1);
     }
 
     return (
@@ -40,7 +37,7 @@ const Logement = ({ logements }) => {
             {logement !== undefined ? (
                 <>
                     <div className="carousel">
-                        <img src={logement.pictures[currentLenght]} alt={logement.pictures[currentLenght]} />
+                        <img src={logement.pictures[currentImageIndex]} alt={logement.pictures[currentImageIndex]} />
                         <div id='ath'>
                             <i class="fa-solid fa-chevron-left chevron" onClick={goToPrevSlide}></i>
                             <p id='numberCarousel'>{currentImageIndex} / {logement.pictures.length}</p>
