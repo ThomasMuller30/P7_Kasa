@@ -69,3 +69,37 @@ main {
     border-radius: 10px;
     padding: 10px;
   }
+
+  @media screen and (max-width: 376px) {
+    main {
+      margin: 0;
+    }
+
+    #banniereAccueil {
+      height: 120px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #banniereAccueil h1 {
+      font-size: 24px;
+      left: 10%;
+      top: 28%;
+      width: 58%;
+    }
+
+    #fondBanniere {
+      height: 100%;
+      object-fit: none;
+      width: 94%;
+    }
+    
+    .gallery {
+      background-color: white;
+    }
+
+    .locations {
+      margin: 20px 0;
+    }
+  }
