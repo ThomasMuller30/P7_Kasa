@@ -1,6 +1,6 @@
 import '../styles/Logement.css'
-import fleche from '../assets/fleche.svg'
-import carrousel from '../assets/carrousel.jpg'
+// import fleche from '../assets/fleche.svg'
+// import carrousel from '../assets/carrousel.jpg'
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 import Error from '../pages/Error'
@@ -19,21 +19,43 @@ const Logement = ({ logements }) => {
 
     const array = [...Array(rating)];
     const starVide = [...Array(5 - rating)];
-    console.log(array)
+
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(1);
+    const [currentLenght, setCurrentLenght] = useState(0);
+
+    function goToPrevSlide() {
+        setCurrentImageIndex(currentImageIndex === 1 ? logement.pictures.length - 1 : currentImageIndex - 1);
+        setCurrentLenght(currentLenght === 0 ? currentLenght - 1 : 1);
+    }
+
+    function goToNextSlide() {
+        setCurrentImageIndex(currentImageIndex === logement.pictures.length - 1 ? 1 : currentImageIndex + 1);
+        setCurrentLenght(currentLenght === currentLenght - 1 ? 1 : currentLenght + 1);
+    }
 
     return (
 
         <main>
             {logement !== undefined ? (
                 <>
-                    <div id="carrousel">
+                    <div className="carousel">
+                        <img src={logement.pictures[currentLenght]} alt={logement.pictures[currentLenght]} />
+                        <div id='ath'>
+                            <i class="fa-solid fa-chevron-left chevron" onClick={goToPrevSlide}></i>
+                            <p id='numberCarousel'>{currentImageIndex} / {logement.pictures.length}</p>
+                            <i class="fa-solid fa-chevron-right chevron" onClick={goToNextSlide}></i>
+                        </div>
+
+                    </div>
+                    {/* <div id="carrousel">
                         <img src={carrousel} alt="test carrousel" />
                         <div id="ath">
                             <img id="flecheGauche" src={fleche} alt="fleche qui pointe à Gauche" />
                             <img id="flecheDroite" src={fleche} alt="fleche qui pointe à Droite" />
                         </div>
                         <p id="numberCarrousel">1/4</p>
-                    </div>
+                    </div> */}
                     <div id="enteteLogement">
                         <div id="leftSide">
                             <h1>{logement.title}</h1>

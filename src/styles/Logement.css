@@ -4,14 +4,17 @@
     padding: 0;
 }
 
-#carrousel {
+.carousel {
     display: block;
     width: 100%;
+    height: 500px;
     margin-bottom: -50px;
   }
   
-  #carrousel img {
+  .carousel img {
     width: 100%;
+    height: 90%;
+    object-fit: cover;
   }
   
   #ath {
@@ -21,19 +24,14 @@
     top: -270px;
   }
   
-  #ath img {
-    width: 8%;
+  
+  .chevron {
+    color: white;
+    font-size: 6em;
+    font-weight: 700;
   }
   
-  #flecheGauche {
-    rotate: 90deg;
-  }
-  
-  #flecheDroite {
-    rotate: -90deg;
-  }
-  
-  #numberCarrousel {
+  #numberCarousel {
     color: white;
     font-family: "Montserrat";
     font-style: normal;
@@ -41,7 +39,7 @@
     font-size: 18px;
     text-align: center;
     position: relative;
-    top: -120px;
+    top: 240px;
   }
   
   #enteteLogement {
