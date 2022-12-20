@@ -40,7 +40,7 @@ const Logement = ({ logements }) => {
                         <img src={logement.pictures[currentImageIndex]} alt={logement.pictures[currentImageIndex]} />
                         <div id='ath'>
                             <i class="fa-solid fa-chevron-left chevron" onClick={goToPrevSlide}></i>
-                            <p id='numberCarousel'>{currentImageIndex} / {logement.pictures.length}</p>
+                            <p id='numberCarousel'>{currentImageIndex + 1} / {logement.pictures.length}</p>
                             <i class="fa-solid fa-chevron-right chevron" onClick={goToNextSlide}></i>
                         </div>
 
