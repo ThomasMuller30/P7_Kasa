@@ -5,6 +5,7 @@ import Error from '../pages/Error'
 import Details from '../components/Details'
 import Tag from '../components/Tag'
 import '@fortawesome/fontawesome-free/css/all.css'
+import Gallery from '../components/Gallery'
 
 const Logement = ({ logements }) => {
     const { id } = useParams();
@@ -13,30 +14,12 @@ const Logement = ({ logements }) => {
         logements.find(item => item.id === id)
     );
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    function goToPrevSlide() {
-        setCurrentImageIndex(currentImageIndex === 0 ? logement.pictures.length - 1 : currentImageIndex - 1);
-    }
-
-    function goToNextSlide() {
-        setCurrentImageIndex(currentImageIndex === logement.pictures.length - 1 ? 0 : currentImageIndex + 1);
-    }
-
     return (
 
         <main>
             {logement !== undefined ? (
                 <>
-                    <div className="carousel">
-                        <img src={logement.pictures[currentImageIndex]} alt={logement.pictures[currentImageIndex]} />
-                        <div id='ath'>
-                            {logement.pictures.length > 1 && (<i class="fa-solid fa-chevron-left chevron" onClick={goToPrevSlide}></i>)}
-                            <p id='numberCarousel'>{currentImageIndex + 1} / {logement.pictures.length}</p>
-                            {logement.pictures.length > 1 && (<i class="fa-solid fa-chevron-right chevron" onClick={goToNextSlide}></i>)}
-                        </div>
-
-                    </div>
+                    <Gallery element={logement} />
                     <div id="enteteLogement">
                         <div id="leftSide">
                             <h1>{logement.title}</h1>
