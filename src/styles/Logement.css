@@ -147,6 +147,14 @@
       flex-direction: column;
     }
 
+    #tags {
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      margin-top: 10px;
+    }
+
     #rightSide {
       margin-top: 20px;
       width: 100%;
@@ -159,10 +167,11 @@
     #note {
       flex: 1;
       justify-content: flex-start;
+      margin: 0;
     }
 
     #note i {
-      font-size: 16px;
+      font-size: 20px;
     }
 
     #identite {
