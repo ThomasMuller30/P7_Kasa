@@ -28,7 +28,7 @@ header {
     /* HEADER */
   
     header {
-      margin: 30px;
+      margin: 15px;
     }
   
     img#logoHeader {
@@ -39,8 +39,8 @@ header {
       width: 166px;
     }
   
-    header nav .navPrincipale {
-      font-size: 14px;
+    header a {
+      font-size: 16px;
       text-transform: uppercase;
     }
   }

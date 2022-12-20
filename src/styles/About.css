@@ -63,3 +63,23 @@
   details[open] summary img {
     rotate: 180deg;
   }
+
+  @media screen and (max-width: 376px) {
+    .banniereApropos {
+      height: 220px;
+      margin: 15px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .banniereApropos img {
+      height: 100%;
+      object-fit: none;
+      width: 90%;
+    }
+
+    details {
+      width: 90%;
+    }
+  }
