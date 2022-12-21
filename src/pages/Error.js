@@ -1,7 +1,14 @@
 import '../styles/Error.css'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+
 
 const Error = () => {
+
+    useEffect(() => {
+        document.title = "Kasa | Error 404"
+    }, [])
+
     return (
         <>
             <main id='erreur'>

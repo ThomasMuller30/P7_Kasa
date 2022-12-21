@@ -1,6 +1,6 @@
 import '../styles/Logement.css'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Error from '../pages/Error'
 import Details from '../components/Details'
 import Tag from '../components/Tag'
@@ -8,11 +8,16 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import Gallery from '../components/Gallery'
 
 const Logement = ({ logements }) => {
+
     const { id } = useParams();
 
     const [logement] = useState(
         logements.find(item => item.id === id)
     );
+
+    useEffect(() => {
+        document.title = `Kasa | ${logement.title}`
+    }, [])
 
     return (
 

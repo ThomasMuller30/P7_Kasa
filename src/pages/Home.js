@@ -1,8 +1,12 @@
 import '../styles/Home.css'
 import banniereAccueil from '../assets/banniere-accueil.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Home = ({ logements }) => {
+    useEffect(() => {
+        document.title = "Kasa | Home"
+    }, [])
     return (
         <main id='home'>
             <div id="banniereAccueil">

@@ -1,8 +1,14 @@
 import '../styles/About.css'
 import apropos from '../assets/banniere-a-propos.jpg'
 import Details from '../components/Details'
+import { useEffect } from 'react'
 
 const About = () => {
+
+    useEffect(() => {
+        document.title = "Kasa | A propos"
+    }, [])
+
     const infos = [
         { summary: "Fiabilité", description: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." },
         { summary: "Respect", description: "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." },
