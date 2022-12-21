@@ -31,7 +31,7 @@ const Logement = ({ logements }) => {
                             <p id="localisation">{logement.location}</p>
                             <div id="tags">
                                 {logement.tags.map((tag) =>
-                                    <Tag tag={tag}></Tag>
+                                    <Tag key={logement.tags.index} tag={tag}></Tag>
                                 )}
                             </div>
                         </div>
