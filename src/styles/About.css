@@ -66,6 +66,13 @@
     rotate: 180deg;
   }
 
+  @media screen and (max-width: 800px) and (min-width: 377px) {
+    main#about {
+      margin: 0;
+      min-height: 700px;
+    }
+  }
+
   @media screen and (max-width: 376px) {
     .banniereApropos {
       height: 220px;

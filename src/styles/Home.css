@@ -1,4 +1,4 @@
-main {
+main#home {
     margin: 68px;
   }
 
@@ -71,8 +71,37 @@ main {
     padding: 10px;
   }
 
+  @media screen and (max-width: 800px) and (min-width: 377px) {
+    main#home {
+      margin: 0;
+    }
+
+    #banniereAccueil {
+      height: 120px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #fondBanniere {
+      height: 100%;
+      object-fit: none;
+      width: 94%;
+    }
+
+    .gallery {
+      background-color: white;
+    }
+
+    .locations {
+      margin: 20px 0;
+    }
+
+
+  }
+
   @media screen and (max-width: 376px) {
-    main {
+    main#home {
       margin: 0;
     }
 
@@ -87,7 +116,7 @@ main {
       font-size: 24px;
       left: 10%;
       top: 28%;
-      width: 63%;
+      width: 55%;
       text-align: left;
     }
 

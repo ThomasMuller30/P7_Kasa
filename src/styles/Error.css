@@ -1,3 +1,7 @@
+main#erreur {
+  margin: 68px
+}
+
 .error {
     display: flex;
     flex-direction: column;
@@ -35,6 +39,12 @@
     font-size: 18px;
     color: #ff6060;
     text-decoration-line: underline;
+  }
+
+  @media screen and (max-width: 800px) and (min-width: 377px) {
+    main#erreur {
+      height: 680px;
+    }
   }
   
   @media screen and (max-width: 376px) {

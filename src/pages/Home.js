@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Home = ({ logements }) => {
     return (
-        <main>
+        <main id='home'>
             <div id="banniereAccueil">
                 <h1 id="titreAccueil">Chez vous, partout et ailleurs</h1>
                 <img id="fondBanniere" src={banniereAccueil} alt="Paysage montagneux en bord de mer" />

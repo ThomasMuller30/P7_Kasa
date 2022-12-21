@@ -16,7 +16,7 @@ const Logement = ({ logements }) => {
 
     return (
 
-        <main>
+        <main id='logement'>
             {logement !== undefined ? (
                 <>
                     <Gallery element={logement} />

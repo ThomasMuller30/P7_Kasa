@@ -11,18 +11,20 @@ const About = () => {
     ]
     return (
         <>
-            <div class="apropos">
-                <div class="banniereApropos">
-                    <img src={apropos} alt="Paysage montagneux" />
+            <main id='about'>
+                <div class="apropos">
+                    <div class="banniereApropos">
+                        <img src={apropos} alt="Paysage montagneux" />
+                    </div>
+                    <div class="descriptions">
+                        {infos.map((info) => (
+                            <Details key={info.index} summary={info.summary}>
+                                {info.description}
+                            </Details>
+                        ))}
+                    </div>
                 </div>
-                <div class="descriptions">
-                    {infos.map((info) => (
-                        <Details key={info.index} summary={info.summary}>
-                            {info.description}
-                        </Details>
-                    ))}
-                </div>
-            </div>
+            </main>
         </>
     )
 }
