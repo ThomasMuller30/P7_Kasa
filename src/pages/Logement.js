@@ -57,7 +57,7 @@ const Logement = ({ logements }) => {
                         </Details>
                         <Details summary='Équipements'>
                             {logement.equipments.map((equipement) =>
-                                <p>{equipement}</p>
+                                <p key={logement.equipments.index}>{equipement}</p>
                             )}
                         </Details>
                     </div>
