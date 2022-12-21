@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../styles/Gallery.css'
 
 const Gallery = ({element}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
