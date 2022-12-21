@@ -17,7 +17,7 @@ const Logement = ({ logements }) => {
 
     useEffect(() => {
         document.title = `Kasa | ${logement.title}`
-    }, [])
+    },)
 
     return (
 
