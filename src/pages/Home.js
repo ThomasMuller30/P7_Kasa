@@ -2,6 +2,7 @@ import '../styles/Home.css'
 import banniereAccueil from '../assets/banniere-accueil.jpg'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import Card from "../components/Card"
 
 const Home = ({ logements }) => {
     useEffect(() => {
@@ -16,10 +17,7 @@ const Home = ({ logements }) => {
             <div className="gallery">
                 {logements.map((logement) => (
                     <Link key={logement.id} to={"/logement/" + logement.id} className="link">
-                        <div className="locations">
-                            <img src={logement.cover} alt={"Photo de " + logement.title} />
-                            <p className="titleLocation">{logement.title}</p>
-                        </div>
+                        <Card logement={logement} />
                     </Link>
                 ))}
             </div>
