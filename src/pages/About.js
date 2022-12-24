@@ -23,8 +23,8 @@ const About = () => {
                         <img src={apropos} alt="Paysage montagneux" />
                     </div>
                     <div className="descriptions">
-                        {infos.map((info) => (
-                            <Details key={info.index} summary={info.summary}>
+                        {infos.map((info, index) => (
+                            <Details key={index} summary={info.summary}>
                                 {info.description}
                             </Details>
                         ))}

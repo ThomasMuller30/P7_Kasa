@@ -30,8 +30,8 @@ const Logement = ({ logements }) => {
                             <h1>{logement.title}</h1>
                             <p id="localisation">{logement.location}</p>
                             <div id="tags">
-                                {logement.tags.map((tag) =>
-                                    <Tag key={logement.tags.index} tag={tag}></Tag>
+                                {logement.tags.map((tag, index) =>
+                                    <Tag key={index} tag={tag}></Tag>
                                 )}
                             </div>
                         </div>
@@ -41,10 +41,10 @@ const Logement = ({ logements }) => {
                                 <img id="pictureProfil" src={logement.host.picture} alt="PP du propriétaire" />
                             </div>
                             <div id="note">
-                                {[...Array(parseInt(logement.rating))].map((i) =>
+                                {[...Array(parseInt(logement.rating))].map((v, i) =>
                                     <i key={i} className="fa-solid fa-star"></i>
                                 )}
-                                {[...Array(5 - parseInt(logement.rating))].map((i) =>
+                                {[...Array(5 - parseInt(logement.rating))].map((v, i) =>
                                     <i key={i} className="fa-solid fa-star grise"></i>
                                 )
                                 }
@@ -56,8 +56,8 @@ const Logement = ({ logements }) => {
                             {logement.description}
                         </Details>
                         <Details summary='Équipements'>
-                            {logement.equipments.map((equipement) =>
-                                <p key={logement.equipments.index}>{equipement}</p>
+                            {logement.equipments.map((equipement, index) =>
+                                <p key={index}>{equipement}</p>
                             )}
                         </Details>
                     </div>
