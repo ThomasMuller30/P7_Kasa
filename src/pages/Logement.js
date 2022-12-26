@@ -16,7 +16,7 @@ const Logement = ({ logements }) => {
     );
 
     useEffect(() => {
-        document.title = `Kasa | ${logement.title}`
+        document.title = `Kasa | ${logement ? logement.title : "Error 404"}`
     },)
 
     return (
