@@ -17,7 +17,7 @@ const KasaRouter = ({ logements }) => {
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
-      </Router>
+    </Router>
  )
 }
 
